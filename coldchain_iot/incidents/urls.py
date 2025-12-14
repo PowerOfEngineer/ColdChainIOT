@@ -7,8 +7,11 @@ from .views import (
 )
 
 urlpatterns = [
-    path("all/", IncidentListAPIView.as_view()),
-    path("accept/<int:incident_id>/", AcceptIncidentAPIView.as_view()),
-    path("refuse/<int:incident_id>/", RefuseIncidentAPIView.as_view()),
-    path("resolve/<int:incident_id>/", ResolveIncidentAPIView.as_view()),
+    # LISTE DES INCIDENTS
+    path("", IncidentListAPIView.as_view(), name="incident-list"),
+
+    # ACTIONS
+    path("accept/<int:pk>/", AcceptIncidentAPIView.as_view(), name="incident-accept"),
+    path("refuse/<int:pk>/", RefuseIncidentAPIView.as_view(), name="incident-refuse"),
+    path("resolve/<int:pk>/", ResolveIncidentAPIView.as_view(), name="incident-resolve"),
 ]

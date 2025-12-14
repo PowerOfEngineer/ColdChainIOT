@@ -5,7 +5,7 @@ function Incidents() {
   const [incidents, setIncidents] = useState([]);
 
   const fetchIncidents = () => {
-    api.get("incidents/all/")
+    api.get("incidents/")
       .then(res => setIncidents(res.data))
       .catch(err => console.error(err));
   };
