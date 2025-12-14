@@ -1,0 +1,158 @@
+/* Animations globales */
+@keyframes pulse {
+  0%, 100% { 
+    transform: scale(1); 
+  }
+  50% { 
+    transform: scale(1.05); 
+    box-shadow: 0 6px 30px rgba(255, 65, 108, 0.6); 
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+/* Hover effects pour StatCard */
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar hover effects */
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.logout-button:hover {
+  background: rgba(255, 68, 68, 0.2);
+  border-color: rgba(255, 68, 68, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Animation de la navbar au chargement */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+nav {
+  animation: slideDown 0.5s ease-out;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+  
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .navbar-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* Animation du logo */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.8;
+  }
+}
+
+/* Animation du dropdown */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects */
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  transform: translateY(-2px);
+}
+
+.user-button:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  transform: translateY(-2px);
+}
+
+.dropdown-item:hover {
+  background: rgba(0, 0, 0, 0.05) !important;
+}
+
+.dropdown-item-danger:hover {
+  background: rgba(239, 68, 68, 0.1) !important;
+}
+
+.brand:hover .logo-icon {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 20px !important;
+  }
+  
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .nav-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .brand-subtitle {
+    display: none;
+  }
+}
+
